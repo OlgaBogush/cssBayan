@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+p {
+    margin: 0 0 5px;
+}
+h1 {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* faq */ 
+.faq {
+    max-width: 500px;
+    margin: 20px auto;
+}
+.faq:hover .faq-title::after {
+    display: block;
+}
+.faq-item {
+    border-top: 1px solid #ccc;
+}
+.faq-title {
+    display: block;
+    cursor: pointer;
+    padding: 10px 15px;
+    position: relative;
+
+    /* transition: background .3s ease-out; */
+}
+.faq-title::after {
+    content: "";
+    display: none;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: #000 transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+
+    transform: translateY(-50%);
+}
+.faq-item:hover .faq-img {
+    width: 300px;
+    height: 300px;
+}
+.faq-item:hover .faq-title::after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #000 transparent;
+}
+.faq-input {
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+
+    position: absolute;
+}
+.faq-input:checked ~ .faq-title::after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent #000 transparent;
+}
+.faq-input:checked ~ .faq-img {
+    width: 300px;
+    height: 300px;
+}
+.faq-input:checked ~ .faq-title {
+    color: blue;
+}
+.faq-img {
+    display: block;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    transition: all .4s ease-out;
+}
+.faq-img-1 {
+    background-image: url("./images/You\ can\ not.jpeg");
+}
+.faq-img-2 {
+    background-image: url("./images/Keep\ calm.jpeg");
+}
+.faq-img-3 {
+    background-image: url("./images/Work\ life\ balance.jpeg")
+}
+.faq-img-4 {
+    background-image: url("./images/Dude\ where\ is\ JS.jpeg")
+}
+.faq-img-5 {
+    background-image: url("./images/Relax\ and\ take\ it\ easy.jpeg")
+}
