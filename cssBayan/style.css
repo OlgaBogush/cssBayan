@@ -30,11 +30,10 @@ h1 {
 .faq-title {
     display: block;
     cursor: pointer;
-    /* color: rgb(255, 0, 174); */
     padding: 10px 15px;
     position: relative;
 
-    transition: background .2s ease-out;
+    /* transition: background .3s ease-out; */
 }
 .faq-title::after {
     content: "";
@@ -61,7 +60,6 @@ h1 {
     position: absolute;
 }
 .faq-input:checked ~ .faq-title::after {
-    /* display: block; */
     border-style: solid;
     border-width: 0 5px 8px 5px;
     border-color: transparent transparent #000 transparent;
@@ -74,14 +72,15 @@ h1 {
     color: blue;
 }
 .faq-img {
+    display: block;
+    cursor: pointer;
     width: 0;
     height: 0;
     margin: 0 auto;
-    /* padding: 10px 15px; */
     background-repeat: no-repeat;
     background-size: contain;
     
-    transition: .3s;
+    transition: all .4s ease-out;
 }
 .faq-img-1 {
     background-image: url("./images/You\ can\ not.jpeg");
